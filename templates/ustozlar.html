@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fan</title>
+</head>
+<body>
+    <br>
+    <h1>Universitetda bor ustozlar royhati</h1>
+    <br>
+    <hr>
+    <br>
+    <form method="get">
+        <input type="text" name="qidir">
+        <button>Qidirish</button>
+    </form>
+    {% for ustoz in ustozlar%}
+    <h2>{{ustoz.ism}} fani  {{ustoz.fan}}</h2>
+    <a href="/ustoz_ochir/{{ustoz.id}}/"><button>O'chirish</button></a>
+    {%endfor%}
+</body>
+</html>

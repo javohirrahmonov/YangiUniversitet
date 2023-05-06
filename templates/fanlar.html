@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fan</title>
+</head>
+<body>
+    <br>
+    <h1>Universitetda bor fanlar royhati</h1>
+    <br>
+    <hr>
+    <br>
+    <form method="get">
+        <input type="text" name="qidir">
+        <button>Qidirish</button>
+    </form>
+    {% for fan in fanlar%}
+    <h2>{{fan.nom}} faning yonalishi {{fan.yonalish}}</h2>
+    <a href="/fan_ochir/{{fan.id}}/"><button>O'chirish</button></a>
+    {%endfor%}
+</body>
+</html>
